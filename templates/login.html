@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+
+{% block title %}BitePlate - Login{% endblock %}
+
+{% block auth_content %}
+<div class="auth-wrapper">
+
+    <div class="auth-card-modern">
+
+        <!-- Left Side - Branding -->
+        <div class="auth-left">
+            <div class="brand">
+                <div class="logo">
+                    <span>B</span>
+                </div>
+                <div>
+                    <h1>BitePlate</h1>
+                    <p>Restaurant OS</p>
+                </div>
+            </div>
+
+            <div class="hero-content">
+                <h2>Good to see you again</h2>
+                <p>Run your entire restaurant operation with confidence — from kitchen to table.</p>
+            </div>
+
+            <div class="features">
+                <div class="feature-item">
+                    <span>📊</span>
+                    <span>Real-time Analytics</span>
+                </div>
+                <div class="feature-item">
+                    <span>👨‍🍳</span>
+                    <span>Kitchen Display</span>
+                </div>
+                <div class="feature-item">
+                    <span>💳</span>
+                    <span>POS + Payments</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Side - Form -->
+        <div class="auth-right">
+            <div class="form-container">
+                <h2 class="form-title">Sign In</h2>
+                <p class="form-subtitle">Enter your credentials to access your workspace</p>
+
+                {% if error %}
+                <div class="auth-error">
+                    {{ error }}
+                </div>
+                {% endif %}
+
+                <form method="POST">
+                    {% csrf_token %}
+
+                    <div class="input-group">
+                        <label>Username</label>
+                        <input 
+                            type="text" 
+                            name="username" 
+                            id="username"
+                            placeholder="Enter your username"
+                            autocomplete="username"
+                            required
+                        >
+                    </div>
+
+                    <div class="input-group">
+                        <label>Password</label>
+                        <input 
+                            type="password" 
+                            name="password" 
+                            id="password"
+                            placeholder="Enter your password"
+                            autocomplete="current-password"
+                            required
+                        >
+                    </div>
+
+                    <button type="submit" class="login-btn">
+                        Sign In
+                    </button>
+
+                    <div class="forgot-link">
+                        <a href="#">Forgot password?</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

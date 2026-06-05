@@ -1,0 +1,250 @@
+/* =========================================
+   RESET
+========================================= */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+
+    background:
+    radial-gradient(
+        circle at top left,
+        rgba(34,197,94,.1),
+        transparent 25%
+    ),
+    radial-gradient(
+        circle at bottom right,
+        rgba(34,197,94,.08),
+        transparent 25%
+    ),
+    #ffffff;
+
+    color:#1a1a1a;
+    min-height:100vh;
+    overflow-x:hidden;
+}
+
+/* =========================================
+   ROOT COLORS - GREEN & WHITE THEME
+========================================= */
+
+:root{
+    --bg-primary:#ffffff;
+    --bg-secondary:#f5f5f5;
+    --bg-card:#f9f9f9;
+    --bg-hover:#f0f0f0;
+    --border:rgba(34, 197, 94, 0.15);
+
+    --text-main:#1a1a1a;
+    --text-muted:#666666;
+
+    /* Main Accent Color */
+    --primary:#22c55e;
+    --primary-dark:#16a34a;
+    --primary-light:#4ade80;
+
+    --green:#22c55e;
+    --blue:#3b82f6;
+    --red:#ef4444;
+
+    --radius-xl:32px;
+    --radius-lg:24px;
+    --radius-md:18px;
+
+    --shadow-lg: 0 10px 30px rgba(34, 197, 94, 0.1);
+}
+
+/* =========================================
+   SCROLLBAR
+========================================= */
+::-webkit-scrollbar{
+    width:10px;
+    height:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#f0f0f0;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#d0d0d0;
+    border-radius:999px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#22c55e;
+}
+
+/* =========================================
+   TYPOGRAPHY
+========================================= */
+h1,h2,h3,h4,h5,h6{
+    color:var(--text-main);
+    font-weight:800;
+}
+
+p{
+    color:var(--text-muted);
+    line-height:1.7;
+}
+
+a{
+    text-decoration:none;
+}
+
+/* =========================================
+   BUTTONS
+========================================= */
+.btn{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    height:58px;
+    padding:0 24px;
+    border-radius:18px;
+    font-weight:800;
+    transition:.25s;
+}
+
+.btn:hover{
+    transform:translateY(-2px);
+}
+
+.btn-primary{
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color:black;
+}
+
+.btn-success{
+    background:var(--primary);
+    color:white;
+}
+
+.btn-danger{
+    background:var(--red);
+    color:white;
+}
+
+.btn-blue{
+    background:var(--blue);
+    color:white;
+}
+
+/* =========================================
+   CARDS & BADGES
+========================================= */
+.card{
+    background: linear-gradient(145deg, rgba(255,255,255,.98), rgba(249,249,249,.98));
+    border:2px solid var(--border);
+    border-radius:var(--radius-xl);
+    box-shadow:var(--shadow-lg);
+}
+
+.badge{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    padding:10px 18px;
+    border-radius:999px;
+    font-size:14px;
+    font-weight:800;
+}
+
+.badge-success{
+    background:rgba(34,197,94,.15);
+    color:var(--primary-light);
+}
+
+.badge-warning{
+    background:rgba(251,191,36,.12);
+    color:#fbbf24;
+}
+
+.badge-danger{
+    background:rgba(239,68,68,.12);
+    color:#f87171;
+}
+
+/* =========================================
+   SIDEBAR & TOPBAR ACCENTS
+========================================= */
+.sidebar-brand,
+.sidebar-link:hover,
+.live-badge,
+.online-dot,
+.live-dot {
+    color: var(--primary);
+}
+
+.sidebar-link.active,
+.sidebar-link:hover {
+    background: rgba(34, 197, 94, 0.1);
+    color: white;
+}
+
+/* Online indicators */
+.online-dot,
+.live-dot {
+    background: var(--primary);
+    box-shadow: 0 0 8px var(--primary);
+}
+
+/* =========================================
+   PAGE TITLES
+========================================= */
+.page-title{
+    font-size:62px;
+    line-height:1;
+    margin-bottom:18px;
+    color: var(--primary);
+}
+
+.page-subtitle{
+    font-size:18px;
+    color:var(--text-muted);
+}
+
+/* =========================================
+   EMPTY STATE
+========================================= */
+.empty-state{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:80px 20px;
+}
+
+.empty-icon{
+    font-size:90px;
+    margin-bottom:20px;
+    filter: drop-shadow(0 0 15px rgba(34,197,94,.4));
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+@media(max-width:1200px){
+    .page-title{
+        font-size:48px;
+    }
+}
+
+@media(max-width:768px){
+    .page-title{
+        font-size:38px;
+    }
+    .btn{
+        height:52px;
+    }
+}

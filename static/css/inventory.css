@@ -1,0 +1,33 @@
+.inventory-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:16px;
+}
+
+.inventory-card,
+.stock-card{
+    border-radius:12px;
+    border:2px solid rgba(34,197,94,.25);
+    background:linear-gradient(180deg, rgba(255,255,255,.98), rgba(249,249,249,.96));
+    padding:20px;
+    transition:.25s;
+}
+
+.inventory-card:hover,
+.stock-card:hover{
+    border-color:#22c55e;
+    transform:translateY(-3px);
+}
+
+/* Low stock alert - kept red (standard for warnings) */
+.stock-low,
+.inventory-alert-text{
+    color:#ef4444;
+    font-weight:800;
+}
+
+/* Good stock status */
+.stock-good{
+    color:#22c55e;
+    font-weight:800;
+}
