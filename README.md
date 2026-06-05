@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # BitePlate Restaurant OS
 
 BitePlate is a Django-based restaurant operating system for table service, POS, kitchen display, inventory, staff, reporting and settings.
@@ -50,3 +51,6 @@ Open `http://127.0.0.1:8000/`.
 python manage.py check
 python manage.py test commandengine pricing historylog
 ```
+=======
+# Biteplate
+>>>>>>> 276325c02fa34ba73e6c5b6c444100fca2b20a05
